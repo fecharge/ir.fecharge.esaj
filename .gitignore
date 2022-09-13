@@ -1,0 +1,4 @@
+.env
+.vsccode
+node_modules
+dist

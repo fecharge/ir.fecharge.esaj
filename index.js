@@ -1,5 +1,15 @@
-function getCredit(){
-	return 12000;
+require('dotenv').config()
+const { getCredit }  = require('./usecase/getCredit/index')(process.env.USERNAME,process.env.PASSSWORD);
+
+async function credit(){
+	try {
+		let result = await getCredit();	
+		console.log(result);
+	} catch (error) {
+		console.log(error.message);
+	}
+	
+	
 }
 
 function charge(){
@@ -7,5 +17,4 @@ function charge(){
 	return status;
 }
 
-
-console.log(charge());
+credit();
