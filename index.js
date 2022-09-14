@@ -1,20 +1,8 @@
-require('dotenv').config()
-const { getCredit }  = require('./usecase/getCredit/index')(process.env.USERNAME,process.env.PASSSWORD);
-
-async function credit(){
-	try {
-		let result = await getCredit();	
-		console.log(result);
-	} catch (error) {
-		console.log(error.message);
-	}
-	
-	
-}
-
-function charge(){
-	let status = "done";
-	return status;
-}
-
-credit();
+module.exports = function(_username, _passsword){
+	const { getCredit }  = require('./usecase/getCredit/index')(_username, _passsword);
+    return Object.freeze(
+        {
+            getCredit,
+        }
+    );;
+};
