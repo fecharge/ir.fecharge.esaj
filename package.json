@@ -1,6 +1,6 @@
 {
   "name": "ir.fecharge.esaj",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "esaj provider api wrapper",
   "main": "index.js",
   "scripts": {
