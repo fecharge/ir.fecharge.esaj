@@ -7,9 +7,13 @@ esaj provider api wrapper
 2. topup
 
 ## How To install
+```
 npm i ir.fecharge.esaj
+```
 
 ## How To Use
+
+require node v16.14.0 to run
 ```
 const irFechargeEsaj = require('./index')("user","pass");
 
@@ -21,3 +25,7 @@ irFechargeEsaj.getCredit()
         console.log(err);
     })
 ```
+
+### Businness requirement
+
+As a reseller you should have an valid account on esaj site, to get a username and password contact the company from (https://esaj.ir/)[https://esaj.ir/]
