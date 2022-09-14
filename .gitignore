@@ -2,4 +2,4 @@
 .vscode
 run.js
 node_modules
-dists
+dist
